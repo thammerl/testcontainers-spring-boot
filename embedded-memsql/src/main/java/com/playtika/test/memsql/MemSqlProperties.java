@@ -2,12 +2,11 @@ package com.playtika.test.memsql;
 
 import com.github.dockerjava.api.model.Capability;
 import com.playtika.test.common.properties.CommonContainerProperties;
+import jakarta.validation.constraints.NotEmpty;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.validation.annotation.Validated;
-
-import javax.validation.constraints.NotEmpty;
 
 import java.util.Arrays;
 
@@ -33,6 +32,6 @@ public class MemSqlProperties extends CommonContainerProperties {
 
     @Override
     public String getDefaultDockerImage() {
-        return "singlestore/cluster-in-a-box:alma-7.8.14-8b65b22706-4.0.7-1.13.13";
+        return "ghcr.io/singlestore-labs/singlestoredb-dev:0.2.2";
     }
 }
